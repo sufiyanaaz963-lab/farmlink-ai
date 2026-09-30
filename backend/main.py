@@ -18,7 +18,9 @@ ACCESS_TOKEN_EXPIRE_MINUTES = 60
 
 security = HTTPBearer()
 
-DATABASE_URL = "sqlite:///./farmlink.db"
+import os
+
+DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./farmlink.db")
 
 engine = create_engine(
     DATABASE_URL,

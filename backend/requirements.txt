@@ -3,3 +3,4 @@ uvicorn
 python-jose
 bcrypt
 sqlalchemy
+psycopg2-binary
