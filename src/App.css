@@ -1,0 +1,5580 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f8f4;
+  color: #18351f;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.navbar {
+  height: 72px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-bottom: 1px solid #e1e9e1;
+}
+
+.logo {
+  font-size: 23px;
+  font-weight: bold;
+  color: #16823b;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #405044;
+  font-size: 15px;
+}
+
+.login-btn {
+  border: 1px solid #16823b;
+  background: white;
+  color: #16823b;
+  padding: 9px 20px;
+  border-radius: 8px;
+}
+
+.hero {
+  padding: 75px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  background: linear-gradient(135deg, #eef8ee, #ffffff);
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.tag {
+  color: #16823b;
+  font-weight: bold;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: 54px;
+  line-height: 1.08;
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  color: #16823b;
+}
+
+.hero-text {
+  color: #5c6b60;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 13px 22px;
+  border-radius: 9px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.primary-btn {
+  background: #16823b;
+  color: white;
+  border: none;
+}
+
+.primary-btn:hover {
+  background: #10652d;
+}
+
+.secondary-btn {
+  background: white;
+  color: #16823b;
+  border: 1px solid #16823b;
+}
+
+.price-card {
+  background: white;
+  width: 330px;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.price-card p {
+  color: #69766c;
+  margin-bottom: 12px;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #16823b;
+  margin: 12px 0;
+}
+
+.confidence {
+  color: #c18700;
+  margin-bottom: 15px;
+}
+
+.price-card small {
+  color: #748078;
+  line-height: 1.5;
+}
+
+.produce-section {
+  padding: 60px 7%;
+  background: #ffffff;
+}
+
+.produce-card {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+}
+
+.produce-card h2 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.form-subtitle {
+  color: #6b776e;
+  margin-bottom: 30px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.form-grid label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.form-grid input,
+.form-grid select {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ccd8ce;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.submit-btn {
+  margin-top: 30px;
+}
+
+.success-box {
+  text-align: center;
+  padding: 20px;
+}
+
+.success-icon {
+  margin: auto;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #16823b;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+}
+
+.success-box h3 {
+  margin: 15px 0;
+  font-size: 25px;
+}
+
+.prediction-box {
+  margin: 25px auto;
+  max-width: 500px;
+  padding: 25px;
+  background: #eef8ee;
+  border-radius: 14px;
+}
+
+.prediction-box h2 {
+  color: #16823b;
+  margin: 10px 0;
+}
+
+.prediction-box span {
+  color: #b27a00;
+  font-weight: bold;
+}
+
+.explanation {
+  margin-top: 15px;
+  color: #657268;
+}
+
+.features {
+  padding: 25px 7%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.feature {
+  background: #ffffff;
+  padding: 26px;
+  border-radius: 20px;
+  border: 1px solid #dcebe1;
+  box-shadow: 0 8px 22px rgba(35, 90, 50, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(35, 90, 50, 0.14);
+}
+
+.feature-icon {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.feature h3 {
+  margin-bottom: 10px;
+}
+
+.feature p {
+  color: #68756c;
+  line-height: 1.5;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #18351f;
+  color: white;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .features {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links a {
+    display: none;
+  }
+}
+.buyers-section {
+  padding: 60px 7%;
+  background: #f5f8f4;
+}
+
+.buyers-card {
+  max-width: 1000px;
+  margin: auto;
+  background: white;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.buyers-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.buyers-header h2 {
+  font-size: 30px;
+  margin: 8px 0;
+}
+
+.buyers-header p:not(.tag) {
+  color: #68756c;
+}
+
+.close-btn {
+  border: none;
+  background: #f0f3f0;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.match-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.match-summary div {
+  background: #eef8ee;
+  padding: 18px;
+  border-radius: 10px;
+}
+
+.match-summary span {
+  display: block;
+  color: #718078;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.match-summary strong {
+  font-size: 17px;
+}
+
+.matched-title {
+  margin-bottom: 15px;
+}
+
+.buyer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.buyer {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px;
+  border: 1px solid #e1e9e1;
+  border-radius: 12px;
+}
+
+.buyer-icon {
+  font-size: 32px;
+}
+
+.buyer-info {
+  flex: 1;
+}
+
+.buyer-info h3 {
+  margin-bottom: 6px;
+}
+
+.buyer-info p {
+  color: #68756c;
+  font-size: 14px;
+  margin-top: 3px;
+}
+
+.match-score {
+  text-align: center;
+}
+
+.match-score strong {
+  display: block;
+  color: #16823b;
+  font-size: 22px;
+}
+
+.match-score span {
+  color: #718078;
+  font-size: 12px;
+}
+
+.connect-btn {
+  background: #16823b;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.matching-explanation {
+  margin-top: 25px;
+  padding: 18px;
+  background: #fff8df;
+  border-radius: 10px;
+  color: #695b28;
+}
+
+.matching-explanation span {
+  display: block;
+  margin-top: 6px;
+  margin-left: 25px;
+}
+
+@media (max-width: 700px) {
+  .match-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .buyer {
+    flex-wrap: wrap;
+  }
+
+  .connect-btn {
+    width: 100%;
+  }
+}
+
+.fpo-section {
+  padding: 60px 7%;
+  background: #f5f8f4;
+}
+
+.fpo-card {
+  max-width: 950px;
+  margin: auto;
+  background: white;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.fpo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.fpo-header h2 {
+  font-size: 30px;
+  margin: 8px 0;
+}
+
+.fpo-header p:not(.tag) {
+  color: #68756c;
+}
+
+.demand-box {
+  margin: 30px 0;
+  padding: 20px;
+  background: #eef8ee;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.demand-box span {
+  color: #68756c;
+}
+
+.demand-box strong {
+  font-size: 20px;
+  color: #16823b;
+}
+
+.farmer-title {
+  margin-bottom: 15px;
+}
+
+.farmer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.farmer-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px;
+  border: 1px solid #e1e9e1;
+  border-radius: 10px;
+}
+
+.farmer-icon {
+  font-size: 30px;
+}
+
+.farmer-info {
+  flex: 1;
+}
+
+.farmer-info h3 {
+  margin-bottom: 5px;
+}
+
+.farmer-info p {
+  color: #68756c;
+  font-size: 14px;
+}
+
+.farmer-row > strong {
+  color: #16823b;
+  font-size: 18px;
+}
+
+.aggregation-total {
+  margin-top: 20px;
+  padding: 20px;
+  background: #18351f;
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+.aggregation-total strong {
+  font-size: 24px;
+}
+
+.fpo-success {
+  margin-top: 15px;
+  padding: 15px;
+  background: #eef8ee;
+  color: #16823b;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.aggregation-btn {
+  margin-top: 20px;
+}
+
+.feature-btn {
+  margin-top: 15px;
+  padding: 9px 14px;
+  border: 1px solid #16823b;
+  background: white;
+  color: #16823b;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.feature-btn:hover {
+  background: #eef8ee;
+}
+
+.pricing-section {
+  padding: 60px 7%;
+  background: #f5f8f4;
+}
+
+.pricing-card {
+  max-width: 850px;
+  margin: auto;
+  background: white;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.pricing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.pricing-header h2 {
+  font-size: 30px;
+  margin: 8px 0;
+}
+
+.pricing-header p:not(.tag) {
+  color: #68756c;
+}
+
+.order-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.order-summary div {
+  padding: 18px;
+  background: #eef8ee;
+  border-radius: 10px;
+}
+
+.order-summary span {
+  display: block;
+  color: #68756c;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.breakdown-title {
+  margin-bottom: 15px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 17px 5px;
+  border-bottom: 1px solid #e5ebe5;
+}
+
+.price-row strong {
+  color: #18351f;
+}
+
+.price-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 20px;
+  background: #18351f;
+  color: white;
+  border-radius: 10px;
+  font-size: 19px;
+}
+
+.farmer-receives {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding: 18px;
+  background: #eef8ee;
+  border-radius: 10px;
+  color: #16823b;
+  font-weight: bold;
+}
+
+.transparency-note {
+  margin-top: 20px;
+  padding: 18px;
+  background: #fff8df;
+  border-radius: 10px;
+  color: #695b28;
+}
+
+.transparency-note p {
+  margin-top: 7px;
+}
+
+.order-btn {
+  margin-top: 22px;
+}
+
+@media (max-width: 700px) {
+  .order-summary {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Smart Logistics */
+.demo-note {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.route-card {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.route-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.route-header span {
+  font-size: 12px;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.route-header h3 {
+  margin-top: 6px;
+  color: #166534;
+}
+
+.route-arrow {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.route-line {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.route-dot {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #dcfce7;
+  font-size: 20px;
+}
+
+.route-progress {
+  flex: 1;
+  height: 5px;
+  margin: 0 10px;
+  background: #22c55e;
+  border-radius: 10px;
+}
+
+.shipment-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.shipment-info div {
+  padding: 18px;
+  background: #f8fafc;
+  border-radius: 12px;
+}
+
+.shipment-info span {
+  display: block;
+  color: #64748b;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.shipment-info strong {
+  color: #166534;
+}
+
+/* Order Confirmation */
+.order-success-card {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  text-align: center;
+  background: white;
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.success-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: #dcfce7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+  font-weight: bold;
+  color: #16a34a;
+}
+
+.order-success-card h2 {
+  margin-bottom: 10px;
+  font-size: 32px;
+  color: #166534;
+}
+
+.success-message {
+  color: #64748b;
+  margin-bottom: 30px;
+}
+
+.order-summary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.summary-item {
+  padding: 18px;
+  text-align: left;
+  background: #f8fafc;
+  border-radius: 14px;
+}
+
+.summary-item span {
+  display: block;
+  color: #64748b;
+  font-size: 13px;
+  margin-bottom: 7px;
+}
+
+.summary-item strong {
+  color: #166534;
+  font-size: 16px;
+}
+
+.completion-message {
+  padding: 18px;
+  margin-bottom: 25px;
+  background: #f0fdf4;
+  border-radius: 14px;
+}
+
+.completion-message strong {
+  color: #166534;
+}
+
+.completion-message p {
+  margin-top: 6px;
+  color: #64748b;
+}
+
+/* Marketplace Overview */
+.market-overview {
+  padding: 40px 20px;
+  background: #f8fafc;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-heading .tag {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #16a34a;
+}
+
+.section-heading h2 {
+  margin: 8px 0;
+  font-size: 30px;
+  color: #166534;
+}
+
+.section-heading p {
+  color: #64748b;
+}
+
+.overview-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+.overview-card {
+  padding: 26px 18px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #dcebe1;
+  border-radius: 20px;
+  box-shadow: 0 8px 22px rgba(35, 90, 50, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.overview-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(35, 90, 50, 0.14);
+}
+.overview-card > span {
+  display: block;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.overview-card strong {
+  display: block;
+  font-size: 28px;
+  color: #166534;
+  margin-bottom: 6px;
+}
+
+.overview-card p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.live-listings {
+  padding: 70px 8%;
+  background: #f8faf7;
+}
+
+.live-listings .section-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.live-listings .section-heading h2 {
+  margin: 10px 0;
+}
+
+.live-listings .section-heading p {
+  color: #666;
+}
+
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.listing-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #d7e6d8;
+  box-shadow: 0 6px 18px rgba(35, 90, 50, 0.10);
+  cursor: pointer;
+  min-height: 175px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.listing-card:hover {
+  transform: translateY(-7px);
+  border-color: #79ad7f;
+  box-shadow: 0 14px 32px rgba(35, 90, 50, 0.18);
+}
+
+.listing-icon {
+  font-size: 32px;
+}
+
+.listing-card h3 {
+  margin: 10px 0 14px;
+  color: #174a35;
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.listing-card p {
+  margin: 7px 0;
+  color: #5f7466;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.listing-card strong {
+  color: #174a35;
+  font-weight: 700;
+}
+
+/* Mandi Prices */
+
+.mandi-section {
+  margin: 60px auto;
+  max-width: 1100px;
+  padding: 0 20px;
+}
+
+.mandi-table {
+  margin-top: 25px;
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 16px;
+}
+
+.mandi-row {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1.2fr 1.2fr 1.4fr;
+  gap: 20px;
+  padding: 16px 20px;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+  background: white;
+}
+
+.mandi-header {
+  font-weight: 700;
+  background: #f3f4f6;
+}
+
+.mandi-row span {
+  white-space: nowrap;
+}
+
+.mandi-row:not(.mandi-header):hover {
+  background: #f9fafb;
+}
+
+/* =========================================
+   FARMLINK AI - PREMIUM AGRITECH DESIGN
+   ========================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(34, 197, 94, 0.08), transparent 25%),
+    #f6faf6;
+}
+
+/* Navbar */
+.navbar {
+  height: 76px;
+  padding: 0 7%;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(22, 130, 59, 0.12);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 25px;
+  letter-spacing: -0.5px;
+}
+
+.logo::before {
+  content: "🌱 ";
+}
+
+/* Navigation */
+.nav-links {
+  gap: 28px;
+}
+
+.nav-links a {
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #16823b;
+}
+
+/* Login button */
+.login-btn {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.login-btn:hover {
+  background: #eef8ee;
+  transform: translateY(-1px);
+}
+
+/* Hero */
+.hero {
+  min-height: 560px;
+  padding: 90px 7%;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 85% 30%, rgba(34, 197, 94, 0.16), transparent 28%),
+    linear-gradient(135deg, #edf9ef 0%, #ffffff 55%, #f3faf4 100%);
+}
+
+.hero::after {
+  content: "🌾";
+  position: absolute;
+  right: 5%;
+  bottom: -30px;
+  font-size: 170px;
+  opacity: 0.08;
+  transform: rotate(-10deg);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.tag {
+  display: inline-block;
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: #e4f6e7;
+  letter-spacing: 0.8px;
+}
+
+.hero h1 {
+  font-weight: 800;
+  letter-spacing: -1.5px;
+}
+
+.hero-text {
+  max-width: 610px;
+}
+
+/* Buttons */
+.primary-btn,
+.secondary-btn,
+.feature-btn,
+.connect-btn,
+.login-btn {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.primary-btn:hover,
+.connect-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(22, 130, 59, 0.22);
+}
+
+.secondary-btn:hover {
+  transform: translateY(-2px);
+  background: #eef8ee;
+}
+
+/* AI Price Card */
+.price-card {
+  position: relative;
+  border: 1px solid rgba(22, 130, 59, 0.12);
+  box-shadow:
+    0 20px 50px rgba(24, 53, 31, 0.10),
+    0 4px 12px rgba(24, 53, 31, 0.05);
+  transition: transform 0.25s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-6px);
+}
+
+.price-card::before {
+  content: "LIVE";
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  padding: 5px 9px;
+  border-radius: 20px;
+  background: #e7f8eb;
+  color: #16823b;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+}
+
+.price {
+  font-size: 28px;
+}
+
+/* Main cards */
+.produce-card,
+.buyers-card,
+.fpo-card,
+.pricing-card,
+.route-card,
+.order-success-card {
+  border: 1px solid rgba(22, 130, 59, 0.10);
+  box-shadow:
+    0 15px 40px rgba(24, 53, 31, 0.07),
+    0 3px 10px rgba(24, 53, 31, 0.04);
+}
+
+/* Feature cards */
+.feature {
+  border: 1px solid rgba(22, 130, 59, 0.10);
+  box-shadow: 0 8px 25px rgba(24, 53, 31, 0.04);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.feature:hover {
+  transform: translateY(-7px);
+  border-color: rgba(22, 130, 59, 0.25);
+  box-shadow: 0 16px 35px rgba(24, 53, 31, 0.09);
+}
+
+.feature-icon {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef8ee;
+  border-radius: 16px;
+}
+
+/* Form inputs */
+.form-grid input,
+.form-grid select {
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-grid input:focus,
+.form-grid select:focus {
+  border-color: #16823b;
+  box-shadow: 0 0 0 4px rgba(22, 130, 59, 0.10);
+}
+
+/* Buyer cards */
+.buyer {
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.buyer:hover {
+  transform: translateY(-3px);
+  border-color: rgba(22, 130, 59, 0.25);
+  box-shadow: 0 8px 22px rgba(24, 53, 31, 0.06);
+}
+
+/* Farmer rows */
+.farmer-row {
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.farmer-row:hover {
+  transform: translateX(4px);
+  background: #fbfefb;
+}
+
+/* Mandi table */
+.mandi-table {
+  box-shadow: 0 12px 30px rgba(24, 53, 31, 0.06);
+  overflow: hidden;
+  border: 1px solid #e1e9e1;
+}
+
+.mandi-header {
+  background: #18351f;
+  color: white;
+}
+
+.mandi-row {
+  transition: background 0.2s ease;
+}
+
+.mandi-row:not(.mandi-header):hover {
+  background: #eef8ee;
+}
+
+/* Marketplace cards */
+.overview-card,
+.listing-card {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.overview-card:hover,
+.listing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(24, 53, 31, 0.09);
+}
+
+/* Logistics */
+.route-card {
+  background:
+    linear-gradient(135deg, #ffffff, #f7fcf8);
+}
+
+.route-progress {
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.25);
+}
+
+/* Success card */
+.order-success-card {
+  background:
+    radial-gradient(circle at top, #f0fdf4, #ffffff 55%);
+}
+
+.success-icon {
+  box-shadow: 0 8px 20px rgba(22, 163, 74, 0.15);
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+  background:
+    linear-gradient(135deg, #102a18, #18351f);
+}
+
+/* Mobile improvements */
+@media (max-width: 800px) {
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .hero {
+    padding: 65px 5%;
+  }
+
+  .price-card {
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .features {
+    padding: 50px 5%;
+  }
+}
+
+/* =========================================
+   LIVE MANDI MARKET DASHBOARD
+   ========================================= */
+
+.mandi-section {
+  margin: 0;
+  max-width: none;
+  padding: 80px 7%;
+  background:
+    linear-gradient(180deg, #f8faf7 0%, #ffffff 100%);
+}
+
+.market-header {
+  max-width: 1100px;
+  margin: 0 auto 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+}
+
+.market-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 13px;
+  border-radius: 20px;
+  background: #eaf7ed;
+  color: #16823b;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 5px rgba(34, 197, 94, 0.12);
+}
+
+.market-header h2 {
+  margin: 12px 0 8px;
+  font-size: 34px;
+  color: #18351f;
+}
+
+.market-header p {
+  color: #68756c;
+  font-size: 16px;
+}
+
+.market-source {
+  min-width: 150px;
+  padding: 15px 18px;
+  border: 1px solid #dfe9e1;
+  border-radius: 14px;
+  background: white;
+  text-align: right;
+}
+
+.market-source span {
+  display: block;
+  font-size: 10px;
+  color: #7a867d;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.market-source strong {
+  color: #16823b;
+}
+
+/* Market statistics */
+
+.market-stats {
+  max-width: 1100px;
+  margin: 0 auto 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.market-stat {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px 20px;
+  background: white;
+  border: 1px solid #e1e9e1;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(24, 53, 31, 0.04);
+}
+
+.market-stat > span {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #eef8ee;
+  font-size: 23px;
+}
+
+.market-stat strong {
+  display: block;
+  color: #18351f;
+  font-size: 20px;
+}
+
+.market-stat p {
+  margin-top: 3px;
+  color: #758078;
+  font-size: 12px;
+}
+
+/* Market cards */
+
+.market-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.market-card {
+  padding: 22px;
+  background: white;
+  border: 1px solid #e1e9e1;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(24, 53, 31, 0.05);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.market-card:hover {
+  transform: translateY(-5px);
+  border-color: #b9d9bf;
+  box-shadow: 0 15px 35px rgba(24, 53, 31, 0.09);
+}
+
+.market-card-top {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.commodity-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  background: #f0f8ee;
+  font-size: 24px;
+}
+
+.market-card-title {
+  flex: 1;
+}
+
+.market-card-title h3 {
+  font-size: 18px;
+  color: #18351f;
+  text-transform: capitalize;
+}
+
+.market-card-title p {
+  margin-top: 4px;
+  color: #718078;
+  font-size: 13px;
+}
+
+.market-status {
+  padding: 5px 9px;
+  border-radius: 20px;
+  background: #eaf8ed;
+  color: #16823b;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+}
+
+.price-range-title {
+  margin-top: 24px;
+  margin-bottom: 12px;
+  color: #718078;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.price-range {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 8px;
+  text-align: center;
+}
+
+.price-range > div {
+  padding: 13px 8px;
+  border-radius: 10px;
+  background: #f7faf7;
+}
+
+.price-range span {
+  display: block;
+  color: #89948d;
+  font-size: 9px;
+  font-weight:600;
+}
+/* LOGIN POPUP */
+
+.login-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 25, 18, 0.55);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 9999;
+}
+
+.login-modal {
+  position: relative;
+  width: min(460px, 100%);
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 42px 40px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.login-close {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: #f1f3ef;
+  color: #35523d;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.login-close:hover {
+  background: #e5e9e3;
+}
+
+.login-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #edf5ed;
+  border-radius: 18px;
+  font-size: 32px;
+}
+
+.login-welcome {
+  margin-bottom: 10px;
+  color: #4b8a55;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.login-modal h2 {
+  margin: 0;
+  color: #173b23;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.login-subtitle {
+  margin: 12px auto 30px;
+  max-width: 330px;
+  color: #6d776f;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.login-field {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.login-field label {
+  display: block;
+  margin-bottom: 8px;
+  color: #263b2c;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.login-field input {
+  width: 100%;
+  height: 52px;
+  padding: 0 15px;
+  border: 1px solid #d8ded9;
+  border-radius: 12px;
+  background: #fafbfa;
+  color: #18351f;
+  font-size: 15px;
+  outline: none;
+}
+
+.login-field input:focus {
+  border-color: #4b8a55;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(75, 138, 85, 0.12);
+}
+
+.login-submit {
+  width: 100%;
+  height: 54px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 12px;
+  background: #2f7d3e;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.login-submit:hover {
+  background: #256832;
+}
+
+@media (max-width: 500px) {
+  .login-modal {
+    padding: 38px 24px;
+  }
+
+  .login-modal h2 {
+    font-size: 25px;
+  }
+}
+/* Produce Form Popup */
+
+.produce-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 25, 15, 0.72);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 9999;
+}
+
+.produce-modal {
+  position: relative;
+  width: 100%;
+  max-width: 760px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 34px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+}
+
+.produce-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: #f1f4f1;
+  color: #4a554d;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.produce-close:hover {
+  background: #e4ebe5;
+}
+
+.produce-modal h2 {
+  margin: 0 0 10px;
+  color: #1d2a21;
+}
+
+.produce-modal .form-subtitle {
+  margin-bottom: 25px;
+}
+
+.produce-modal .form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.produce-modal .form-grid > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.produce-modal label {
+  margin-bottom: 7px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.produce-modal input,
+.produce-modal select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  border: 1px solid #d8e0d9;
+  border-radius: 10px;
+  background: #fafcf9;
+  font-size: 14px;
+}
+
+.produce-modal .submit-btn {
+  width: 100%;
+  margin-top: 24px;
+}
+
+@media (max-width: 650px) {
+  .produce-modal .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ================================
+   BUYER CONNECTION POPUP
+   ================================ */
+
+.buyer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 25, 15, 0.72);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 10000;
+}
+
+.buyer-modal {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 34px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+  animation: buyerModalIn 0.25s ease-out;
+}
+
+@keyframes buyerModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.buyer-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: #f1f4f1;
+  color: #4a554d;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.buyer-close:hover {
+  background: #e4ebe5;
+}
+
+.buyer-modal-icon {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: #edf6ee;
+  font-size: 28px;
+  margin-bottom: 14px;
+}
+
+.buyer-modal h2 {
+  margin: 0 0 8px;
+  color: #1d2a21;
+}
+
+.buyer-modal-subtitle {
+  color: #68736b;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+.buyer-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.buyer-details > div {
+  padding: 15px;
+  background: #f7faf7;
+  border: 1px solid #e1e9e2;
+  border-radius: 12px;
+}
+
+.buyer-details span {
+  display: block;
+  color: #68736b;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.buyer-details strong {
+  display: block;
+  color: #26342a;
+  font-size: 15px;
+}
+
+.buyer-connect-note {
+  margin: 20px 0;
+  padding: 14px;
+  border-radius: 12px;
+  background: #edf6ee;
+  color: #49604d;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.buyer-modal .primary-btn {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .buyer-modal {
+    padding: 25px 20px;
+  }
+
+  .buyer-details {
+    grid-template-columns: 1fr;
+  }
+}
+.interest-success {
+  margin-bottom: 16px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: #e8f7eb;
+  border: 1px solid #b9dfc0;
+  color: #256b35;
+  font-size: 14px;
+  font-weight: 600;
+}
+.view-more-produce {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+
+.view-more-produce .secondary-btn {
+  min-width: 190px;
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+/* Produce Details Popup */
+
+.produce-details-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 35, 20, 0.65);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 10000;
+}
+
+.produce-details-modal {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 34px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+  animation: producePopupIn 0.2s ease-out;
+}
+
+.produce-details-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: #f1f5f1;
+  color: #405047;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.produce-details-close:hover {
+  background: #e2ebe3;
+}
+
+.produce-details-icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background: #edf7ee;
+  font-size: 32px;
+  margin-bottom: 18px;
+}
+
+.produce-details-modal h2 {
+  margin: 6px 0 8px;
+  font-size: 30px;
+  color: #193b25;
+}
+
+.produce-details-subtitle {
+  margin: 0 0 24px;
+  color: #68766d;
+}
+
+.produce-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.produce-details-grid > div {
+  padding: 15px;
+  border-radius: 14px;
+  background: #f6faf6;
+  border: 1px solid #e1ebe2;
+}
+
+.produce-details-grid span {
+  display: block;
+  font-size: 12px;
+  color: #718078;
+  margin-bottom: 6px;
+}
+
+.produce-details-grid strong {
+  color: #244a2e;
+  font-size: 15px;
+}
+
+.produce-details-modal .primary-btn {
+  width: 100%;
+}
+
+@keyframes producePopupIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 600px) {
+  .produce-details-modal {
+    padding: 26px;
+  }
+
+  .produce-details-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.view-details-btn {
+  width: 100%;
+  margin-top: 16px;
+  padding: 11px 16px;
+  border: none;
+  border-radius: 11px;
+  background: #eaf5ec;
+  color: #236b35;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.view-details-btn:hover {
+  background: #d9eedc;
+  transform: translateY(-2px);
+}
+
+
+
+
+
+/* =========================================
+   NEW FARMLINK AI HERO DESIGN
+   ========================================= */
+
+.hero {
+  min-height: 560px;
+  padding: 80px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(72, 160, 83, 0.18),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #edf8ee 0%,
+      #ffffff 55%,
+      #f1f8f2 100%
+    );
+}
+
+.hero::after {
+  content: "🌾";
+  position: absolute;
+  right: 4%;
+  bottom: -35px;
+  font-size: 180px;
+  opacity: 0.07;
+  transform: rotate(-10deg);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+}
+
+.hero .tag {
+  display: inline-block;
+  padding: 8px 13px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  background: #e2f4e5;
+  color: #16823b;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.hero h1 {
+  margin: 0 0 24px;
+  color: #18351f;
+  font-size: 56px;
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+}
+
+.hero h1 span {
+  color: #16823b;
+}
+
+.hero-text {
+  max-width: 600px;
+  margin-bottom: 30px;
+  color: #5c6b60;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero .primary-btn,
+.hero .secondary-btn {
+  padding: 14px 23px;
+  border-radius: 11px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.hero .primary-btn {
+  background: #16823b;
+  color: white;
+  border: none;
+}
+
+.hero .primary-btn:hover {
+  background: #10652d;
+  transform: translateY(-2px);
+  box-shadow: 0 9px 22px rgba(22, 130, 59, 0.22);
+}
+
+.hero .secondary-btn {
+  background: white;
+  color: #16823b;
+  border: 1px solid #b9d5bd;
+}
+
+.hero .secondary-btn:hover {
+  background: #eef8ee;
+  transform: translateY(-2px);
+}
+
+/* AI PRICE CARD */
+
+.price-card {
+  position: relative;
+  z-index: 2;
+  width: 360px;
+  flex-shrink: 0;
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid #dce8dd;
+  border-radius: 22px;
+
+  box-shadow:
+    0 20px 50px rgba(24, 53, 31, 0.11),
+    0 4px 12px rgba(24, 53, 31, 0.05);
+
+  transition: transform 0.25s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-6px);
+}
+
+.price-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.card-title {
+  margin-bottom: 7px;
+  color: #193b25;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.price-chart-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 13px;
+  background: #edf7ee;
+  font-size: 22px;
+}
+
+.price-card p {
+  margin: 0;
+  color: #69766c;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.price-crop {
+  margin-top: 25px;
+  color: #718078;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.price {
+  margin: 7px 0 10px;
+  color: #16823b;
+  font-size: 31px;
+  font-weight: 800;
+}
+
+.confidence {
+  display: inline-block;
+  padding: 7px 11px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  background: #fff6dc;
+  color: #a36d00;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.price-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 15px;
+  margin-bottom: 18px;
+  border-radius: 13px;
+  background: #f6faf6;
+  color: #5e6c63;
+  font-size: 12px;
+}
+
+.price-card small {
+  display: block;
+  color: #748078;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* HERO MOBILE */
+
+@media (max-width: 800px) {
+  .hero {
+    min-height: auto;
+    padding: 65px 5%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero-text {
+    font-size: 16px;
+  }
+
+  .price-card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+/* =========================================
+   FARMLINK AI — SCREENSHOT NAVBAR
+   ========================================= */
+
+.navbar {
+  height: 64px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-bottom: 1px solid #edf1ed;
+  position: sticky;
+  top: 0;
+  z-index: 5000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #173b28;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.logo-icon {
+  font-size: 25px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+}
+
+.nav-links a {
+  position: relative;
+  padding: 23px 3px 20px;
+  color: #66736a;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #16823b;
+}
+
+.nav-login {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.login-btn {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 15px;
+  border: 1px solid #e0e9e1;
+  border-radius: 22px;
+  background: #f5f8f5;
+  color: #53625a;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-btn span {
+  font-size: 15px;
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  .nav-login {
+    display: none;
+  }
+}
+
+/* =========================================
+   SCREENSHOT NAVBAR
+   ========================================= */
+
+.navbar {
+  height: 64px !important;
+  padding: 0 7% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  background: #ffffff !important;
+  border-bottom: 1px solid #edf1ed !important;
+  position: relative !important;
+  z-index: 5000 !important;
+}
+
+.logo {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  color: #173b28 !important;
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  white-space: nowrap !important;
+}
+
+.logo-leaf {
+  font-size: 24px !important;
+}
+
+.nav-links {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 38px !important;
+}
+
+.nav-links a {
+  position: relative !important;
+  padding: 23px 3px 20px !important;
+  color: #66736a !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+}
+
+.nav-links a:hover {
+  color: #16823b !important;
+}
+
+.nav-links a.active {
+  color: #16823b !important;
+}
+
+.nav-links a.active::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  height: 3px !important;
+  border-radius: 3px 3px 0 0 !important;
+  background: #16823b !important;
+}
+
+.nav-account {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+.login-btn {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 9px 15px !important;
+  border: 1px solid #dfe8e1 !important;
+  border-radius: 22px !important;
+  background: #f5f8f5 !important;
+  color: #53625a !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+}
+
+.login-arrow {
+  font-size: 15px !important;
+  margin-left: 2px !important;
+}
+
+.login-icon {
+  font-size: 15px !important;
+}
+
+.welcome-user {
+  color: #356342 !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+
+/* =========================================
+   FARMLINK AI — REFERENCE HERO
+   ========================================= */
+
+.hero {
+  min-height: 285px !important;
+  padding: 58px 7% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 50px !important;
+  position: relative !important;
+  overflow: hidden !important;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(232, 246, 229, 0.94) 0%,
+      rgba(232, 246, 229, 0.72) 42%,
+      rgba(255, 255, 255, 0.18) 100%
+    ),
+    url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1800&q=85")
+    center / cover no-repeat !important;
+}
+
+.hero::after {
+  display: none !important;
+}
+
+.hero-content {
+  position: relative !important;
+  z-index: 2 !important;
+  max-width: 590px !important;
+}
+
+.hero .tag {
+  display: none !important;
+}
+
+.hero h1 {
+  margin: 0 0 12px !important;
+  color: #123d2c !important;
+  font-size: 40px !important;
+  line-height: 1.08 !important;
+  font-weight: 800 !important;
+  letter-spacing: -1px !important;
+}
+
+.hero h1 span {
+  color: #123d2c !important;
+}
+
+.hero-text {
+  margin: 0 0 22px !important;
+  color: #52685b !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+}
+
+.hero-buttons {
+  display: flex !important;
+  gap: 14px !important;
+  flex-wrap: wrap !important;
+}
+
+.hero .primary-btn {
+  padding: 12px 22px !important;
+  border-radius: 10px !important;
+  background: #149447 !important;
+  color: #ffffff !important;
+  border: none !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+}
+
+.hero .secondary-btn {
+  padding: 12px 22px !important;
+  border-radius: 10px !important;
+  background: rgba(255,255,255,0.88) !important;
+  color: #176b3c !important;
+  border: 1px solid #6cae83 !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+}
+
+/* AI CARD */
+
+.hero .price-card {
+  width: 360px !important;
+  padding: 24px !important;
+  flex-shrink: 0 !important;
+  position: relative !important;
+  z-index: 3 !important;
+
+  background: rgba(255,255,255,0.96) !important;
+  border: 1px solid rgba(220,232,222,0.9) !important;
+  border-radius: 18px !important;
+
+  box-shadow: 0 15px 35px rgba(25,65,38,0.16) !important;
+}
+
+.hero .price-card-top {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+}
+
+.hero .card-title {
+  color: #173d29 !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+}
+
+.hero .price-card p {
+  color: #718078 !important;
+  font-size: 11px !important;
+}
+
+.hero .price-chart-icon {
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 12px !important;
+  background: #e7f7eb !important;
+}
+
+.hero .price-crop {
+  margin-top: 20px !important;
+  color: #173d29 !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+}
+
+.hero .price {
+  margin: 5px 0 7px !important;
+  color: #183e2a !important;
+  font-size: 24px !important;
+  font-weight: 800 !important;
+}
+
+.hero .confidence {
+  margin-bottom: 14px !important;
+  padding: 5px 9px !important;
+  background: #e6f7e9 !important;
+  color: #16823b !important;
+  font-size: 11px !important;
+}
+
+.hero .price-meta {
+  padding: 10px !important;
+  margin-bottom: 12px !important;
+  gap: 5px !important;
+  border-radius: 9px !important;
+  background: #f5faf6 !important;
+  font-size: 10px !important;
+}
+
+.hero .price-card small {
+  font-size: 10px !important;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+  .hero {
+    padding: 45px 5% !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .hero h1 {
+    font-size: 34px !important;
+  }
+
+  .hero .price-card {
+    width: 100% !important;
+    max-width: 390px !important;
+  }
+}
+
+/* Fix AI Price Intelligence icon */
+.hero .price-card-top {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  gap: 20px !important;
+}
+
+.hero .price-chart-icon {
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  flex-shrink: 0 !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  position: relative !important;
+  background: #e8f6eb !important;
+  border-radius: 12px !important;
+
+  font-size: 21px !important;
+  line-height: 1 !important;
+  overflow: hidden !important;
+}
+
+.hero .price-chart-icon img {
+  position: static !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+/* =========================================
+   EXACT AI PRICE INTELLIGENCE CARD
+   ========================================= */
+
+.hero .price-card {
+  width: 390px !important;
+  min-height: 230px !important;
+  padding: 22px 24px !important;
+  box-sizing: border-box !important;
+  background: #ffffff !important;
+  border: none !important;
+  border-radius: 17px !important;
+  box-shadow: 0 12px 35px rgba(24, 62, 42, 0.16) !important;
+}
+
+.hero .price-card-top {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  gap: 14px !important;
+}
+
+.hero .price-card-heading {
+  display: flex !important;
+  align-items: center !important;
+  gap: 11px !important;
+}
+
+.hero .ai-icon {
+  width: 39px !important;
+  height: 39px !important;
+  min-width: 39px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 10px !important;
+  background: #eef7f0 !important;
+  font-size: 22px !important;
+}
+
+.hero .card-title {
+  margin: 0 0 4px !important;
+  color: #173b29 !important;
+  font-size: 16px !important;
+  line-height: 1.2 !important;
+  font-weight: 800 !important;
+}
+
+.hero .price-card-heading p {
+  margin: 0 !important;
+  color: #718078 !important;
+  font-size: 10px !important;
+  line-height: 1.3 !important;
+}
+
+.hero .price-chart-icon {
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: static !important;
+  overflow: visible !important;
+  border-radius: 10px !important;
+  background: #e7f7eb !important;
+  font-size: 21px !important;
+  line-height: 1 !important;
+}
+
+.hero .price-crop {
+  margin-top: 18px !important;
+  margin-bottom: 3px !important;
+  color: #173b29 !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+}
+
+.hero .price {
+  margin: 0 0 7px !important;
+  color: #173b29 !important;
+  font-size: 24px !important;
+  line-height: 1.15 !important;
+  font-weight: 800 !important;
+}
+
+.hero .price span {
+  margin-left: 4px !important;
+  color: #173b29 !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+}
+
+.hero .confidence {
+  display: inline-block !important;
+  margin: 0 0 12px !important;
+  padding: 5px 9px !important;
+  border-radius: 15px !important;
+  background: #e5f7e9 !important;
+  color: #16823b !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+}
+
+.hero .price-meta {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+  gap: 25px !important;
+  padding: 0 !important;
+  margin: 0 0 14px !important;
+  background: transparent !important;
+  color: #68776e !important;
+  font-size: 10px !important;
+}
+
+.hero .analysis-btn {
+  padding: 8px 15px !important;
+  border: 1px solid #45a86b !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+  color: #18733e !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+}
+
+.hero .analysis-btn:hover {
+  background: #eef8f0 !important;
+}
+
+/* =========================================
+   AI CARD - LIVE BADGE + GRAPH
+   ========================================= */
+
+.hero .price-icon-area {
+  position: relative !important;
+  width: 48px !important;
+  min-width: 48px !important;
+  padding-top: 7px !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.hero .live-badge {
+  position: absolute !important;
+  top: -3px !important;
+  right: -2px !important;
+
+  height: 15px !important;
+  padding: 0 5px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  gap: 3px !important;
+
+  border-radius: 8px !important;
+  background: #ffffff !important;
+  color: #16823b !important;
+
+  font-size: 7px !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08) !important;
+  z-index: 5 !important;
+}
+
+.hero .live-dot {
+  width: 5px !important;
+  height: 5px !important;
+  min-width: 5px !important;
+  border-radius: 50% !important;
+  background: #ef4444 !important;
+}
+
+.hero .price-chart-icon {
+  position: static !important;
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  margin-top: 5px !important;
+
+  border-radius: 10px !important;
+  background: #e7f7eb !important;
+
+  font-size: 21px !important;
+  line-height: 1 !important;
+}
+
+/* =========================================
+   FARMLINK AI - HERO REFERENCE DESIGN
+   ========================================= */
+
+.hero {
+  min-height: 620px;
+  padding: 85px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 88% 18%,
+      rgba(111, 180, 103, 0.18),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #edf8ee 0%,
+      #ffffff 52%,
+      #f1f8f0 100%
+    );
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  right: -140px;
+  bottom: -190px;
+  border-radius: 50%;
+  background: rgba(103, 170, 92, 0.10);
+}
+
+.hero::after {
+  content: "🌾";
+  position: absolute;
+  right: 5%;
+  bottom: -35px;
+  font-size: 180px;
+  opacity: 0.07;
+  transform: rotate(-10deg);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+}
+
+.hero .tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  margin-bottom: 20px;
+  border-radius: 30px;
+  background: #e3f3e5;
+  color: #23743a;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+}
+
+.hero h1 {
+  margin: 0 0 22px;
+  color: #18351f;
+  font-size: clamp(44px, 5vw, 62px);
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.hero h1 span {
+  color: #21843c;
+}
+
+.hero-text {
+  max-width: 580px;
+  margin: 0 0 30px;
+  color: #627067;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero .primary-btn,
+.hero .secondary-btn {
+  min-height: 48px;
+  padding: 13px 22px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hero .primary-btn {
+  border: none;
+  background: #21843c;
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(33, 132, 60, 0.18);
+}
+
+.hero .primary-btn:hover {
+  background: #176b2f;
+  transform: translateY(-2px);
+}
+
+.hero .secondary-btn {
+  border: 1px solid #b9d5bd;
+  background: #ffffff;
+  color: #21843c;
+}
+
+.hero .secondary-btn:hover {
+  background: #edf7ee;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   AI PRICE INTELLIGENCE CARD
+   ========================================= */
+
+.hero .price-card {
+  position: relative;
+  z-index: 3;
+  width: 390px;
+  flex-shrink: 0;
+  padding: 28px;
+  border: 1px solid #dce8dd;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.97);
+
+  box-shadow:
+    0 22px 55px rgba(27, 70, 34, 0.12),
+    0 5px 14px rgba(27, 70, 34, 0.05);
+
+  transition: transform 0.25s ease;
+}
+
+.hero .price-card:hover {
+  transform: translateY(-6px);
+}
+
+.price-card-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ai-icon {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 14px;
+  background: #eaf6ec;
+  font-size: 23px;
+}
+
+.price-icon-area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 9px;
+  border-radius: 20px;
+  background: #e8f7eb;
+  color: #28783b;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #32a852;
+  box-shadow: 0 0 0 3px rgba(50, 168, 82, 0.12);
+}
+
+.price-chart-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #f0f7f1;
+  font-size: 21px;
+}
+
+.hero .card-title {
+  margin-bottom: 5px;
+  color: #193b25;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.hero .price-card p {
+  margin: 0;
+  color: #69766c;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.hero .price-crop {
+  margin-top: 25px;
+  color: #718078;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hero .price {
+  margin: 6px 0 10px;
+  color: #21843c;
+  font-size: 31px;
+  font-weight: 800;
+}
+
+.hero .price span {
+  font-size: 15px;
+  font-weight: 700;
+  color: #6d7a70;
+}
+
+.hero .confidence {
+  display: inline-flex;
+  padding: 7px 11px;
+  margin-bottom: 18px;
+  border-radius: 20px;
+  background: #fff6dc;
+  color: #a36d00;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.hero .price-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding: 15px;
+  margin-bottom: 16px;
+  border-radius: 14px;
+  background: #f6faf6;
+  color: #5e6c63;
+  font-size: 12px;
+}
+
+.analysis-btn {
+  width: 100%;
+  padding: 11px 15px;
+  border: 1px solid #c9dfcc;
+  border-radius: 11px;
+  background: #ffffff;
+  color: #23743a;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.analysis-btn:hover {
+  background: #edf7ee;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   HERO RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: auto;
+    padding: 65px 6%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero .price-card {
+    width: 100%;
+    max-width: 430px;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero {
+    padding: 55px 5%;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero-text {
+    font-size: 16px;
+  }
+
+  .hero .price-card {
+    padding: 23px;
+  }
+}
+/* =========================================
+   FARMLINK AI - MANDI MARKET DESIGN
+   ========================================= */
+
+.mandi-session {
+  position: relative;
+  padding: 80px 7%;
+  background: #f7fbf6;
+  overflow: hidden;
+}
+
+.mandi-session::before {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  left: -180px;
+  top: 40px;
+  border-radius: 50%;
+  background: rgba(105, 170, 92, 0.08);
+  pointer-events: none;
+}
+
+/* MARKET HEADER */
+
+.market-header {
+  position: relative;
+  z-index: 1;
+  max-width: 1150px;
+  margin: 0 auto 32px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.market-header h2 {
+  margin: 0 0 8px;
+  color: #18351f;
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+.market-header p {
+  margin: 0;
+  max-width: 650px;
+  color: #68756c;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.market-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+  padding: 8px 13px;
+  border: 1px solid #cfe4d2;
+  border-radius: 25px;
+  background: #ffffff;
+  color: #28783b;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  box-shadow: 0 5px 15px rgba(35, 90, 50, 0.07);
+}
+
+/* MARKET TABLE / CARDS */
+
+.market-table {
+  position: relative;
+  z-index: 1;
+  max-width: 1150px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid #dce9dd;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 12px 35px rgba(35, 90, 50, 0.08);
+}
+
+.market-table-header {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 17px 24px;
+  background: #edf7ee;
+  color: #53705a;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.market-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  padding: 18px 24px;
+  border-top: 1px solid #edf2ee;
+  color: #3f5145;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.market-row:hover {
+  background: #f8fcf8;
+}
+
+.market-row strong {
+  color: #193b25;
+  font-weight: 750;
+}
+
+.market-row .commodity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #1f4e2b;
+  font-weight: 750;
+}
+
+.market-price {
+  color: #21843c !important;
+  font-weight: 800 !important;
+}
+
+/* MARKET FOOTER */
+
+.market-footer {
+  max-width: 1150px;
+  margin: 18px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  color: #718078;
+  font-size: 12px;
+}
+
+.market-footer strong {
+  color: #4f6555;
+}
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+  .mandi-session {
+    padding: 60px 5%;
+  }
+
+  .market-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .market-header h2 {
+    font-size: 29px;
+  }
+
+  .market-table {
+    overflow-x: auto;
+  }
+
+  .market-table-header,
+  .market-row {
+    min-width: 650px;
+  }
+
+  .market-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+/* =========================================
+   FARMLINK AI - MANDI MARKET REFERENCE DESIGN
+   ========================================= */
+
+.mandi-section {
+  position: relative;
+  padding: 78px 7%;
+  background: #f5faf5;
+  overflow: hidden;
+}
+
+.mandi-section::before {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  top: -180px;
+  right: -120px;
+  border-radius: 50%;
+  background: rgba(103, 170, 92, 0.10);
+  pointer-events: none;
+}
+
+/* Header */
+
+.mandi-section .market-header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  margin-bottom: 32px;
+}
+
+.mandi-section .market-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  margin-bottom: 14px;
+  border-radius: 30px;
+  background: #e5f4e7;
+  color: #26753a;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.mandi-section .market-live-badge .live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #35a653;
+  box-shadow: 0 0 0 3px rgba(53, 166, 83, 0.12);
+}
+
+.mandi-section .market-header h2 {
+  margin: 0 0 9px;
+  color: #193b25;
+  font-size: clamp(30px, 4vw, 42px);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.mandi-section .market-header p {
+  margin: 0;
+  color: #68766d;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.mandi-section .market-source {
+  min-width: 150px;
+  padding: 14px 18px;
+  border: 1px solid #d8e8da;
+  border-radius: 14px;
+  background: #ffffff;
+  text-align: right;
+  box-shadow: 0 6px 18px rgba(35, 90, 50, 0.06);
+}
+
+.mandi-section .market-source span {
+  display: block;
+  margin-bottom: 4px;
+  color: #8a968e;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.mandi-section .market-source strong {
+  color: #26753a;
+  font-size: 14px;
+}
+
+/* Statistics */
+
+.mandi-section .market-stats {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.mandi-section .market-stat {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 19px 21px;
+  border: 1px solid #dce9dd;
+  border-radius: 17px;
+  background: #ffffff;
+  box-shadow: 0 7px 22px rgba(35, 90, 50, 0.07);
+}
+
+.mandi-section .market-stat > span {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 13px;
+  background: #eaf6ec;
+  font-size: 21px;
+}
+
+.mandi-section .market-stat strong {
+  display: block;
+  margin-bottom: 2px;
+  color: #1f6f34;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.mandi-section .market-stat p {
+  margin: 0;
+  color: #78847c;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* Market cards */
+
+.mandi-section .market-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.mandi-section .market-card {
+  padding: 22px;
+  border: 1px solid #dbe8dc;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 8px 25px rgba(35, 90, 50, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mandi-section .market-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 32px rgba(35, 90, 50, 0.13);
+}
+
+/* Crop heading */
+
+.mandi-section .market-card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.mandi-section .commodity-icon {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 14px;
+  background: #eef8ef;
+  font-size: 21px;
+}
+
+.mandi-section .market-card-title {
+  min-width: 0;
+  flex: 1;
+}
+
+.mandi-section .market-card-title h3 {
+  margin: 0 0 3px;
+  color: #23462d;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.mandi-section .market-card-title p {
+  margin: 0;
+  color: #7c8980;
+  font-size: 11px;
+}
+
+.mandi-section .market-status {
+  padding: 5px 8px;
+  border-radius: 20px;
+  background: #e8f7eb;
+  color: #2c813e;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+/* Price */
+
+.mandi-section .price-range-title {
+  margin-bottom: 12px;
+  color: #89948d;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.mandi-section .price-range {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr 1fr;
+  gap: 8px;
+  align-items: center;
+  padding: 14px;
+  border-radius: 14px;
+  background: #f6faf6;
+}
+
+.mandi-section .price-range > div {
+  text-align: center;
+}
+
+.mandi-section .price-range span {
+  display: block;
+  margin-bottom: 5px;
+  color: #929d95;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.mandi-section .price-range strong {
+  color: #4d5c52;
+  font-size: 14px;
+}
+
+.mandi-section .price-range .modal-price {
+  padding: 9px 5px;
+  border-radius: 11px;
+  background: #e8f5e9;
+}
+
+.mandi-section .price-range .modal-price span {
+  color: #43814e;
+}
+
+.mandi-section .price-range .modal-price strong {
+  color: #21843c;
+  font-size: 17px;
+}
+
+/* Price bar */
+
+.mandi-section .price-bar {
+  height: 6px;
+  margin: 17px 2px 15px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #e4eee5;
+}
+
+.mandi-section .price-bar-fill {
+  width: 70%;
+  height: 100%;
+  border-radius: 10px;
+  background: #6cae72;
+}
+
+/* Card footer */
+
+.mandi-section .market-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  color: #89958c;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.mandi-section .market-card-footer span:last-child {
+  color: #43814e;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .mandi-section {
+    padding: 65px 6%;
+  }
+
+  .mandi-section .market-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mandi-section .market-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .mandi-section {
+    padding: 55px 5%;
+  }
+
+  .mandi-section .market-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mandi-section .market-source {
+    width: 100%;
+    text-align: left;
+  }
+
+  .mandi-section .market-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================
+   FARMLINK AI - MANDI VEGETABLE CARDS
+   ========================================= */
+
+.mandi-section {
+  position: relative;
+  padding: 70px 7%;
+  background: #f6faf5;
+  overflow: hidden;
+}
+
+.mandi-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.mandi-header h2 {
+  margin: 10px 0 8px;
+  color: #18351f;
+  font-size: clamp(30px, 4vw, 42px);
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.mandi-header p {
+  margin: 0;
+  color: #68766d;
+  font-size: 15px;
+}
+
+.view-all-prices-btn {
+  padding: 12px 20px;
+  border: 1px solid #bcd7c0;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #23743a;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.view-all-prices-btn:hover {
+  background: #eaf6ec;
+  transform: translateY(-2px);
+}
+
+/* Four vegetable cards */
+
+.mandi-featured-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.mandi-vegetable-card {
+  overflow: hidden;
+  border: 1px solid #dce8dd;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 8px 25px rgba(35, 90, 50, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mandi-vegetable-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(35, 90, 50, 0.14);
+}
+
+/* Vegetable picture area */
+
+.vegetable-image {
+  height: 155px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(
+      135deg,
+      #edf8ee,
+      #f8fbf7
+    );
+  font-size: 82px;
+}
+
+/* Card content */
+
+.vegetable-card-content {
+  padding: 19px;
+}
+
+.vegetable-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.vegetable-title-row h3 {
+  margin: 0 0 7px;
+  color: #21452b;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.vegetable-grade {
+  display: inline-flex;
+  padding: 5px 9px;
+  border-radius: 20px;
+  background: #edf7ee;
+  color: #347542;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.vegetable-trend {
+  padding: 6px 8px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.trend-up {
+  background: #e8f7eb;
+  color: #26803b;
+}
+
+.trend-down {
+  background: #fff0ed;
+  color: #c34e3d;
+}
+
+.vegetable-market {
+  margin: 13px 0 18px;
+  color: #7a877e;
+  font-size: 11px;
+}
+
+/* Price information */
+
+.vegetable-price-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.vegetable-price-row > div {
+  padding: 12px;
+  border-radius: 13px;
+  background: #f6faf6;
+}
+
+.vegetable-price-row span {
+  display: block;
+  margin-bottom: 5px;
+  color: #8a968e;
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.vegetable-price-row strong {
+  color: #21843c;
+  font-size: 14px;
+}
+
+/* =========================================
+   ALL PRICES POPUP
+   ========================================= */
+
+.all-prices-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(15, 35, 20, 0.68);
+  backdrop-filter: blur(6px);
+}
+
+.all-prices-modal {
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 32px;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+}
+
+.all-prices-close {
+  position: fixed;
+  top: 8vh;
+  left: calc(50% + 340px);
+  right: auto;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: #edf6ee;
+  color: #347542;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.all-prices-modal h2 {
+  margin: 8px 0;
+  color: #193b25;
+  font-size: 30px;
+}
+
+.all-prices-subtitle {
+  margin: 0 0 22px;
+  color: #718078;
+  font-size: 13px;
+}
+
+.all-prices-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.all-price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 17px;
+  border: 1px solid #e0ebe1;
+  border-radius: 13px;
+  background: #f8fbf8;
+}
+
+.all-price-row div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.all-price-row div strong {
+  color: #23462d;
+  font-size: 14px;
+}
+
+.all-price-row div span {
+  color: #7d8981;
+  font-size: 11px;
+}
+
+.all-price-row > strong {
+  color: #21843c;
+  font-size: 15px;
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+  .mandi-featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .mandi-section {
+    padding: 55px 5%;
+  }
+
+  .mandi-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mandi-featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .view-all-prices-btn {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   MANDI - COMPACT DASHBOARD CARDS
+   ========================================= */
+
+.mandi-section {
+  padding-top: 42px;
+  padding-bottom: 50px;
+}
+
+/* Reduce space between Hero and Mandi */
+.hero + .mandi-section {
+  margin-top: 0;
+}
+
+.mandi-header {
+  margin-bottom: 22px;
+}
+
+/* Smaller four-card layout */
+.mandi-featured-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.mandi-vegetable-card {
+  width: 100%;
+  max-width: 250px;
+  justify-self: center;
+  border-radius: 18px;
+}
+
+/* Smaller picture */
+.vegetable-image {
+  height: 125px;
+  font-size: 65px;
+}
+
+/* Smaller content */
+.vegetable-card-content {
+  padding: 14px;
+}
+
+.vegetable-title-row h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.vegetable-market {
+  margin: 9px 0 13px;
+  font-size: 10px;
+}
+
+.vegetable-price-row {
+  gap: 7px;
+}
+
+.vegetable-price-row > div {
+  padding: 9px;
+}
+
+.vegetable-price-row strong {
+  font-size: 12px;
+}
+
+/* Make trend smaller */
+.vegetable-trend {
+  padding: 5px 7px;
+  font-size: 10px;
+}
+
+/* Better desktop spacing */
+@media (min-width: 1001px) {
+  .mandi-section {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .mandi-featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mandi-vegetable-card {
+    max-width: 300px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+  .mandi-section {
+    padding-top: 35px;
+  }
+
+  .mandi-featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mandi-vegetable-card {
+    max-width: 340px;
+  }
+}
+
+/* =========================================
+   MANDI - EXTRA COMPACT REFERENCE LAYOUT
+   ========================================= */
+
+.mandi-section {
+  padding-top: 28px;
+  padding-bottom: 36px;
+}
+
+/* Compact header */
+.mandi-header {
+  align-items: center;
+  margin-bottom: 18px;
+  gap: 15px;
+}
+
+.mandi-header > div {
+  min-width: 0;
+}
+
+.mandi-section .market-live-badge {
+  padding: 5px 9px;
+  margin-bottom: 7px;
+  font-size: 9px;
+  border-radius: 18px;
+}
+
+.mandi-section .live-dot {
+  width: 5px;
+  height: 5px;
+}
+
+.mandi-header h2 {
+  margin: 4px 0;
+  font-size: 27px;
+  letter-spacing: -0.6px;
+}
+
+.mandi-header p {
+  font-size: 11px;
+}
+
+/* Small View All Prices button */
+.view-all-prices-btn {
+  min-width: 125px;
+  padding: 9px 13px;
+  border-radius: 9px;
+  font-size: 11px;
+}
+
+/* Four small cards */
+.mandi-featured-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 11px;
+  align-items: stretch;
+}
+
+.mandi-vegetable-card {
+  width: 100%;
+  max-width: none;
+  min-height: 0;
+  aspect-ratio: 1 / 1.05;
+  border-radius: 15px;
+}
+
+/* Smaller image area */
+.vegetable-image {
+  height: 92px;
+  font-size: 52px;
+}
+
+/* Smaller card content */
+.vegetable-card-content {
+  padding: 10px;
+}
+
+.vegetable-title-row {
+  gap: 5px;
+}
+
+.vegetable-title-row h3 {
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.vegetable-grade {
+  padding: 3px 6px;
+  font-size: 8px;
+}
+
+.vegetable-trend {
+  padding: 4px 5px;
+  font-size: 8px;
+}
+
+.vegetable-market {
+  margin: 7px 0 9px;
+  font-size: 8px;
+}
+
+/* Compact prices */
+.vegetable-price-row {
+  gap: 5px;
+}
+
+.vegetable-price-row > div {
+  padding: 7px;
+  border-radius: 8px;
+}
+
+.vegetable-price-row span {
+  margin-bottom: 3px;
+  font-size: 7px;
+}
+
+.vegetable-price-row strong {
+  font-size: 10px;
+}
+
+/* Keep four cards on desktop */
+@media (min-width: 1001px) {
+  .mandi-featured-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .mandi-featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mandi-vegetable-card {
+    aspect-ratio: 1 / 1.05;
+  }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+  .mandi-section {
+    padding-top: 24px;
+  }
+
+  .mandi-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .view-all-prices-btn {
+    align-self: flex-end;
+  }
+
+  .mandi-featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* =========================================
+   MANDI - HEADER ALIGNMENT
+   ========================================= */
+
+.mandi-header {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+/* Keep everything on the left */
+.mandi-header > div:first-child {
+ grid-column: 1 / -1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+
+/* Bright, readable live badge */
+.mandi-section .market-live-badge {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+
+  padding: 5px 10px;
+  margin: 0 0 7px 0;
+
+  background: #dff3e3;
+  border: 1px solid #c4e4c9;
+  color: #176b30;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+/* Make the green dot clearly visible */
+.mandi-section .market-live-badge .live-dot {
+  width: 6px;
+  height: 6px;
+  background: #27a844;
+  box-shadow: 0 0 0 3px rgba(39, 168, 68, 0.12);
+}
+
+/* Heading */
+.mandi-header h2 {
+  margin: 0 0 4px 0;
+  color: #163d21;
+  font-size: 27px;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+/* Description */
+.mandi-header p {
+  margin: 0;
+  color: #607066;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+/* View All Prices stays at top-right */
+.view-all-prices-btn {
+  align-self: flex-start;
+  margin-top: 0;
+
+  min-width: 125px;
+  padding: 9px 13px;
+
+  background: #ffffff;
+  border: 1px solid #b9d6bd;
+  color: #1f7437;
+
+  border-radius: 9px;
+  font-size: 11px;
+  font-weight: 800;
+
+  position: absolute;
+  top: 14px;
+  right: 20px;
+}
+/* =========================================
+   FARMLINK AI - FINAL HERO + MANDI BALANCE
+   ========================================= */
+
+/* ---------- SMALLER HERO ---------- */
+
+.hero {
+  min-height: 500px;
+  padding: 65px 7%;
+  gap: 50px;
+}
+
+.hero h1 {
+  font-size: clamp(40px, 4.5vw, 54px);
+  margin-bottom: 18px;
+}
+
+.hero-text {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.hero .price-card {
+  width: 350px;
+  padding: 24px;
+  border-radius: 20px;
+}
+
+
+/* ---------- MANDI SECTION ---------- */
+
+.mandi-section {
+  padding-top: 24px;
+  padding-bottom: 38px;
+  background: #f7faf6;
+}
+
+
+/* ---------- MANDI HEADER BOX ---------- */
+
+.mandi-header {
+  position: relative;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding: 18px 20px;
+
+  margin-bottom: 16px;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  border: 1px solid #dce9de;
+
+  box-shadow: 0 5px 16px rgba(30, 70, 35, 0.07);
+}
+
+
+/* LEFT SIDE */
+
+.mandi-header > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+/* ---------- LIVE MARKET DATA ---------- */
+
+.mandi-section .market-live-badge {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 5px 10px;
+
+  margin: 0 0 9px 0;
+
+  border-radius: 20px;
+
+  background: #e4f5e7;
+
+  border: 1px solid #c7e5cc;
+
+  color: #176b31;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+
+/* Bright live dot */
+
+.mandi-section .market-live-badge .live-dot {
+  width: 6px;
+  height: 6px;
+
+  margin-right: 5px;
+
+  background: #27a844;
+
+  box-shadow: 0 0 0 3px rgba(39, 168, 68, 0.12);
+}
+
+
+/* ---------- MAIN HEADLINE ---------- */
+
+.mandi-header h2 {
+  margin: 0 0 6px 0;
+
+  color: #18324a;
+
+  font-size: 28px;
+  line-height: 1.15;
+
+  font-weight: 800;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* ---------- SUBTITLE ---------- */
+
+.mandi-header p {
+  margin: 0;
+
+  color: #5f6f7c;
+
+  font-size: 13px;
+
+  line-height: 1.45;
+
+  font-weight: 500;
+}
+
+
+/* ---------- VIEW ALL PRICES ---------- */
+
+.view-all-prices-btn {
+  align-self: flex-end;
+
+  margin-top: 24px;
+
+  min-width: 118px;
+
+  padding: 8px 12px;
+
+  background: #ffffff;
+
+  border: 1px solid #b7c8ba;
+
+  border-radius: 9px;
+
+  color: #315b3a;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  box-shadow: none;
+
+  transition: all 0.2s ease;
+}
+
+.view-all-prices-btn:hover {
+  background: #f0f7f1;
+  border-color: #8caf91;
+  transform: translateY(-1px);
+}
+
+
+/* ---------- FOUR CARDS ---------- */
+
+.mandi-featured-grid {
+  gap: 11px;
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 900px) {
+
+  .hero {
+    min-height: auto;
+    padding: 55px 6%;
+  }
+
+  .hero .price-card {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .mandi-header {
+    padding: 16px;
+  }
+
+  .mandi-header h2 {
+    font-size: 24px;
+  }
+
+  .mandi-header p {
+    font-size: 12px;
+  }
+}
+
+
+@media (max-width: 650px) {
+
+  .hero {
+    padding: 45px 5%;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .mandi-header {
+    flex-direction: column;
+  }
+
+  .view-all-prices-btn {
+    align-self: flex-end;
+    margin-top: 14px;
+  }
+}
+
+/* =========================================
+   FARMLINK AI - HERO FINAL POLISH
+   ========================================= */
+
+.hero {
+  min-height: 470px;
+  padding: 58px 7%;
+
+  background:
+    radial-gradient(
+      circle at 82% 25%,
+      rgba(78, 174, 105, 0.28),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 65% 85%,
+      rgba(230, 169, 58, 0.10),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #e8f6e9 0%,
+      #fffdf7 52%,
+      #edf8f0 100%
+    );
+}
+
+/* Make the decorative agriculture shape brighter */
+.hero::after {
+  opacity: 0.13;
+  font-size: 190px;
+}
+
+/* Main heading */
+.hero h1 {
+  color: #174a35;
+}
+
+/* Highlighted part of heading */
+.hero h1 span {
+  color: #2f9d5b;
+}
+
+/* Description */
+.hero-text {
+  color: #596b61;
+}
+
+/* =========================================
+   SMALLER AI PRICE INTELLIGENCE CARD
+   ========================================= */
+
+.hero .price-card {
+  width: 315px;
+  padding: 20px;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 14px 35px rgba(23, 74, 53, 0.10),
+    0 4px 10px rgba(23, 74, 53, 0.04);
+}
+
+.hero .price-card-heading {
+  gap: 9px;
+}
+
+.hero .ai-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  font-size: 18px;
+}
+
+.hero .card-title {
+  font-size: 15px;
+}
+
+.hero .price-card p {
+  font-size: 10px;
+}
+
+.hero .price-crop {
+  margin-top: 18px;
+  font-size: 11px;
+}
+
+.hero .price {
+  font-size: 25px;
+}
+
+.hero .confidence {
+  padding: 5px 8px;
+  margin-bottom: 13px;
+  font-size: 9px;
+}
+
+.hero .price-meta {
+  padding: 11px;
+  gap: 6px;
+  font-size: 10px;
+}
+
+/* Mandi headline color improvement */
+
+.mandi-header h2 {
+  color: #174a35;
+  font-weight: 800;
+}
+
+.mandi-header p {
+  color: #52665b;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Mandi headline improvement */
+
+.mandi-header h2 {
+  color: #174a35;
+  font-weight: 800;
+}
+
+.mandi-header p {
+  color: #52665b;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Grade badge on vegetable image */
+
+.vegetable-image {
+  position: relative;
+}
+
+.vegetable-image-grade {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  padding: 5px 8px;
+
+  border-radius: 8px;
+
+  background: #fff4d6;
+  color: #8a641c;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  box-shadow: 0 3px 8px rgba(80, 60, 20, 0.12);
+}
+
+/* Mandi card color polish */
+
+.mandi-vegetable-card {
+  background: #fffdf8;
+  border: 1px solid #e3eadf;
+  box-shadow: 0 7px 20px rgba(23, 74, 53, 0.08);
+}
+
+.vegetable-image {
+  background:
+    linear-gradient(
+      135deg,
+      #eef8ed,
+      #fff8e8
+    );
+}
+
+.vegetable-card-content {
+  background: #fffdf9;
+}
+
+.vegetable-price-row > div:first-child {
+  background: #edf7ef;
+}
+
+.vegetable-price-row > div:last-child {
+  background: #eef5f8;
+}
+
+.vegetable-price-row > div:first-child strong {
+  color: #247848;
+}
+
+.vegetable-price-row > div:last-child strong {
+  color: #477f91;
+}
+
+/* Mandi View Details button */
+
+.mandi-details-btn {
+  width: 100%;
+  margin-top: 10px;
+
+  padding: 8px 10px;
+
+  border: 1px solid #c7dfcc;
+  border-radius: 9px;
+
+  background: #f3faf4;
+  color: #247848;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.mandi-details-btn:hover {
+  background: #247848;
+  color: #ffffff;
+  border-color: #247848;
+  transform: translateY(-1px);
+}
+
+.mandi-card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.mandi-card-actions .mandi-details-btn {
+  flex: 1;
+  margin-top: 0;
+}
+
+.mandi-card-actions .vegetable-trend {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.vegetable-title-row {
+  display: block;
+  text-align: center;
+}
+
+.vegetable-title-row h3 {
+  margin: 4px 0 0;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 800;
+  color: #174a35;
+}
+.mandi-card-actions {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.mandi-card-actions .mandi-details-btn {
+  flex: 1;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  white-space: nowrap;
+}
+
+.mandi-card-actions .vegetable-trend {
+  flex-shrink: 0;
+}
+.mandi-vegetable-card {
+  aspect-ratio: auto;
+  min-height: 0;
+  height: 245px;
+}
+
+.vegetable-image {
+  height: 105px;
+}
+
+.vegetable-card-content {
+  padding: 12px;
+}
+
+.vegetable-title-row h3 {
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+
+.mandi-card-actions {
+  margin-top: 18px;
+}             
+/* =====================================================
+   FARMLINK AI - MANDI SECTION REFERENCE DESIGN
+   ===================================================== */
+
+.mandi-section {
+  padding: 24px 6% 14px;
+  background: #f5faf7;
+}
+
+/* Main Mandi container */
+.mandi-header {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+
+  position: relative;
+
+  padding: 14px 20px;
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns: minmax(230px, 1fr) minmax(0, 3fr) auto;
+  grid-template-rows: auto;
+
+  align-items: center;
+  gap: 0px;
+
+  background: #ffffff;
+
+  /* same soft style as the hero */
+  border: 1px solid rgba(92, 160, 111, 0.25);
+  border-radius: 22px;
+
+  box-shadow:
+    0 12px 35px rgba(35, 100, 55, 0.08),
+    0 3px 10px rgba(35, 100, 55, 0.04);
+}
+
+/* Heading area */
+.mandi-header > div:first-child {
+  grid-column: 1 / -1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.mandi-section .market-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 5px 10px;
+  margin-bottom: 8px;
+
+  border-radius: 20px;
+
+  background: #e7f7eb;
+  color: #237844;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.mandi-section .live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2ca052;
+}
+
+/* Today's Mandi Prices */
+.mandi-header h2 {
+  margin: 0;
+
+  color: #174a35;
+  font-size: 27px;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.mandi-header p {
+  margin: 5px 0 0;
+
+  color: #687970;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* Four crop cards */
+.mandi-featured-grid {
+  grid-column: 1 / 3;
+
+  width: 100%;
+  max-width: none;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+
+  margin-top: 6px;
+
+  padding: 0;
+
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+/* Individual crop */
+.mandi-vegetable-card {
+  height: 92px;
+  min-width: 0;
+
+  padding: 10px 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: #fbfefc;
+
+  border: 1px solid #e1eee5;
+  border-radius: 14px;
+
+  box-shadow: 0 4px 12px rgba(35, 100, 55, 0.05);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mandi-vegetable-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 18px rgba(35, 100, 55, 0.09);
+}
+
+/* Crop emoji/image area */
+.vegetable-image {
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: #edf7ef;
+
+  font-size: 30px;
+}
+
+/* Keep only the Grade badge on the image if it exists */
+.vegetable-image-grade {
+  display: inline-flex;
+
+  position: absolute;
+  top: 5px;
+  right: 5px;
+
+  padding: 3px 6px;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: #267547;
+
+  font-size: 7px;
+  font-weight: 800;
+}
+
+/* Crop information */
+.vegetable-card-content {
+  min-width: 0;
+  flex: 1;
+
+  padding: 0;
+}
+
+.vegetable-title-row {
+  display: block;
+  text-align: left;
+}
+
+.vegetable-title-row h3 {
+  margin: 0 0 4px;
+
+  color: #174a35;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  text-align: left;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Hide location from Mandi cards */
+.vegetable-market {
+  display: none;
+}
+
+/* Mandi price */
+.vegetable-price-row {
+  display: block;
+
+  margin: 0;
+  padding: 0;
+}
+
+.vegetable-price-row > div {
+  padding: 0;
+
+  background: transparent !important;
+}
+
+.vegetable-price-row > div:last-child {
+  display: none;
+}
+
+.vegetable-price-row span {
+  display: none;
+}
+
+.vegetable-price-row strong {
+  color: #477f91;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* Trend */
+.mandi-card-actions {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-start;
+
+  gap: 7px;
+
+  margin-top: 4px;
+}
+
+.mandi-card-actions .vegetable-trend {
+  display: inline-flex;
+
+  padding: 3px 7px;
+
+  border-radius: 20px;
+
+  background: #e8f7ed;
+  color: #21843c;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+/* Hide View Details on Mandi cards */
+.mandi-card-actions .mandi-details-btn {
+  display: none;
+}
+
+/* View All Prices button */
+.view-all-prices-btn {
+  grid-column: 3;
+
+  align-self: start;
+
+  min-width: 125px;
+
+  padding: 9px 15px;
+
+  border: 1px solid #4b9b69;
+  border-radius: 12px;
+
+  background: #ffffff;
+  color: #247848;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+
+  position: relative;
+  top: -8px;
+  transform: translateY(-12px)
+}
+
+.view-all-prices-btn:hover {
+  background: #eaf7ed;
+
+  transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 1000px) {
+
+  .mandi-header {
+    grid-template-columns: 1fr;
+  }
+
+  .mandi-header > div:first-child {
+    grid-column: 1;
+  }
+
+  .mandi-featured-grid {
+    grid-column: 1;
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .view-all-prices-btn {
+    grid-column: 1;
+    justify-self: end;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .mandi-section {
+    padding: 18px 5%;
+  }
+
+  .mandi-header {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .mandi-header h2 {
+    font-size: 23px;
+  }
+
+  .mandi-featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mandi-vegetable-card {
+    height: 82px;
+  }
+}
+/* ===== MANDI CROP CARD FIX ===== */
+
+.mandi-vegetable-card {
+  position: relative;
+  height: 118px;
+  min-height: 118px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 12px;
+
+  background: #ffffff;
+  border: 1px solid #dcebe1;
+  border-radius: 16px;
+
+  box-shadow: 0 5px 14px rgba(23, 74, 53, 0.06);
+}
+
+/* Crop picture */
+.vegetable-image {
+  position: relative;
+
+  width: 58px;
+  height: 58px;
+  min-width: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+  background: #eef8ef;
+
+  font-size: 34px;
+  line-height: 1;
+}
+
+/* Grade A badge stays on the picture */
+.vegetable-image-grade {
+  display: inline-flex;
+
+  position: absolute;
+  top: -18px;
+  right: 5px;
+
+  padding: 3px 6px;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: #267547;
+
+  font-size: 7px;
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+/* Crop information */
+.vegetable-card-content {
+  min-width: 0;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 0;
+}
+
+/* Vegetable name */
+.vegetable-title-row {
+  display: block;
+  text-align: left;
+}
+
+.vegetable-title-row h3 {
+  margin: 0 0 5px;
+
+  color: #174a35;
+  font-size: 14px;
+  font-weight: 800;
+
+  text-align: left;
+
+  white-space: nowrap;
+}
+
+/* Mandi price */
+.vegetable-price-row {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.vegetable-price-row > div {
+  padding: 0;
+  background: transparent !important;
+}
+
+.vegetable-price-row > div:last-child {
+  display: none;
+}
+
+.vegetable-price-row span {
+  display: none;
+}
+
+.vegetable-price-row strong {
+  display: block;
+
+  color: #477f91;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.vegetable-price {
+  color: #477f91;
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 4px;
+  text-align: left;
+}
+
+/* Trend below price */
+.mandi-card-actions {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-start;
+
+  margin-top: 5px;
+  padding: 0;
+}
+
+.mandi-card-actions .mandi-details-btn {
+  display: none;
+}
+
+.mandi-card-actions .vegetable-trend {
+  display: inline-flex;
+
+  padding: 3px 7px;
+
+  border-radius: 20px;
+
+  background: #e8f7ed;
+  color: #21843c;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+.mandi-top-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-column: 1 / -1;
+}
+/* ============================= */
+/* ABOUT FARMLINK AI */
+/* ============================= */
+
+.about-section {
+  padding: 30px 7%;
+  background: #f5faf7;
+}
+
+.about-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 38px;
+  background: #ffffff;
+  border: 1px solid #dcebe1;
+  border-radius: 24px;
+  box-shadow: 0 10px 28px rgba(35, 90, 50, 0.08);
+}
+
+.about-content h2 {
+  margin: 10px 0 16px;
+  color: #174a35;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.about-content > p:not(.tag) {
+  max-width: 850px;
+  margin: 0;
+  color: #5f7466;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.about-features {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.about-features > div {
+  padding: 18px;
+  background: #f7fbf8;
+  border: 1px solid #e0eee3;
+  border-radius: 16px;
+}
+
+.about-features strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #236b35;
+  font-size: 15px;
+}
+
+.about-features span {
+  display: block;
+  color: #687b6f;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.my-produce-section {
+  padding: 32px 6% 18px;
+  background: #ffffff;
+}
+
+.my-produce-section .section-heading {
+  margin-bottom: 18px;
+}
+.my-listing-badge {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 5px 9px;
+  border-radius: 20px;
+  background: #e8f7ed;
+  color: #236b35;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+.success-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.success-modal {
+  width: min(420px, 90%);
+  padding: 32px 24px;
+  background: #ffffff;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.success-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: #e8f7ed;
+  color: #16823b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.success-modal h2 {
+  margin: 0 0 10px;
+  color: #173b24;
+}
+
+.success-modal p {
+  margin: 0 0 22px;
+  color: #66736a;
+}
