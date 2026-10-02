@@ -1573,6 +1573,7 @@ loadProduceListings();
             name="email"
             placeholder="Enter your email"
             value={loginForm.email}
+            autoComplete="email"
             onChange={handleLoginChange}
             required
           />
@@ -1586,6 +1587,7 @@ loadProduceListings();
             name="password"
             placeholder="Enter your password"
             value={loginForm.password}
+            autoComplete="current-password"
             onChange={handleLoginChange}
             required
           />
