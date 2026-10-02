@@ -387,25 +387,6 @@ def send_interest(
         "status": new_interest.status
     }
 
-@app.get("/debug-interests")
-def debug_interests():
-    db = SessionLocal()
-    interests = db.query(BuyerInterest).all()
-
-    result = []
-
-    for interest in interests:
-        result.append({
-            "id": interest.id,
-            "buyer_id": interest.buyer_id,
-            "farmer_id": interest.farmer_id,
-            "produce_id": interest.produce_id,
-            "status": interest.status
-        })
-
-    db.close()
-    return result    
-
 @app.get("/my-interests")
 def get_my_interests(current_user: int = Depends(get_current_user)):
     db = SessionLocal()
